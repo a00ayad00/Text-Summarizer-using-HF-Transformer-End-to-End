@@ -1,0 +1,5 @@
+artifacts_folder_dir: artifacts
+
+data:
+    name: Samsung/samsum
+    folder: data

@@ -1,5 +1,6 @@
 transformers[sentencepiece]
 datasets
+py7zr
 rouge_score
 nltk
 tqdm
@@ -9,6 +10,6 @@ torch
 boto3
 python-box
 ensure
-fastapi=
+fastapi
 uvicorn
 -e .

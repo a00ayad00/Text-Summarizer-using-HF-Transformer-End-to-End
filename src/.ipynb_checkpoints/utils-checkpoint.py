@@ -25,7 +25,7 @@ def create_dirs(dirs: list):
     for dir in dirs:
         if not os.path.exists(dir):
             os.makedirs(dir)
-            logger.info(f"\nDirectory '{dir}' was created successfully...")
+            logger.info(f"Directory '{dir}' was created successfully...")
 
 
 @ensure_annotations

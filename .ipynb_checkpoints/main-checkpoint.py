@@ -1,3 +1,3 @@
-from src import logger
+from src.pipeline.data_load import data
 
-logger.info("Custom Logger")
+data.main()
