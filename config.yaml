@@ -3,3 +3,13 @@ artifacts_folder_dir: artifacts
 data:
     name: Samsung/samsum
     folder: data
+
+
+tokenization:
+    folder: tokenized_data
+    model_name: google/pegasus-cnn_dailymail
+
+
+fine_tuning:
+    folder: fine_tuning
+    model_name: google/pegasus-cnn_dailymail
