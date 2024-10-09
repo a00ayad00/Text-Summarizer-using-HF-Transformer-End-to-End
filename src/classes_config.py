@@ -29,3 +29,11 @@ class TrainerConfig:
     params_eval_steps: int
     params_save_steps: int
     params_gradient_accumulation_steps: int
+
+
+@dataclass
+class EvalConfig:
+    folder_path: str
+    model_path: str
+    tokenizer_path: str
+    data_path: str

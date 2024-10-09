@@ -13,3 +13,7 @@ tokenization:
 fine_tuning:
     folder: fine_tuning
     model_name: google/pegasus-cnn_dailymail
+
+
+evaluation:
+    folder: eval

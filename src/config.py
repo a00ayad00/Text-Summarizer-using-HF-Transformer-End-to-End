@@ -1,6 +1,6 @@
 from src.constants import CONFIG_PATH, PARAMS_PATH
 from src.utils import create_dirs, read_yaml
-from src.classes_config import DataConfig, TokenizationConfig, TrainerConfig
+from src.classes_config import DataConfig, TokenizationConfig, TrainerConfig, EvalConfig
 from os.path import join
 
 
@@ -56,4 +56,19 @@ class ConfigManager:
             params_eval_steps=params.eval_steps,
             params_save_steps=params.save_steps,
             params_gradient_accumulation_steps=params.gradient_accumulation_steps
+        )
+
+    def get_eval_config(self):
+        direct = join(self.artifacts, self.config.evaluation.folder)
+        create_dirs([direct])
+
+        model_path = self.get_trainer_config().config_path+'/model'
+        tokenizer_path = self.get_trainer_config().config_path+'/tokenizer'
+        data_path = self.get_data_config().save_path
+
+        return EvalConfig(
+            folder_path=direct,
+            model_path=model_path,
+            tokenizer_path=tokenizer_path,
+            data_path=data_path
         )
