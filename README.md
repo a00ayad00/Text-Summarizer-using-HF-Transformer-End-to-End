@@ -4,5 +4,5 @@
 # Data
 **We used the data from Hugging Face**
 
-# Pipeline Steps
-## 1. Load the data and save it in a local artifacts folder
+# To run the app
+`uvicorn app:app --port 8080  --reload`
